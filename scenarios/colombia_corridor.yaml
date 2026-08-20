@@ -1,0 +1,44 @@
+# A second region, to show the point of holding parameters as data.
+#
+# Same engine, same vehicles, different energy prices, mileage and policy.
+# This is what "prepare existing tools for global adaptation and replication"
+# means in practice: a new country is a new file, not a new codebase.
+#
+# Loosely modelled on a Bogota to Cartagena freight corridor duty cycle.
+# Figures here are illustrative placeholders and must be replaced with sourced
+# values before the output is used for anything real.
+
+baseline_vehicle:
+  name: Class 8 diesel tractor
+  powertrain: diesel
+  purchase_price: "150000"
+  miles_per_gallon: "6.5"
+  maintenance_per_mile: "0.19"
+  insurance_per_year: "12000"
+  residual_fraction: "0.20"
+
+alternative_vehicle:
+  name: Class 8 battery electric tractor
+  powertrain: electric
+  purchase_price: "350000"
+  kwh_per_mile: "2.0"
+  maintenance_per_mile: "0.11"
+  insurance_per_year: "13000"
+  residual_fraction: "0.15"
+  charger_capital: "120000"
+
+region:
+  name: Colombia, Bogota to Cartagena corridor
+  currency: USD
+  diesel_price_per_gallon: "3.20"
+  electricity_price_per_kwh: "0.11"
+  demand_charge_per_year: "4000"
+
+policy:
+  name: Import duty relief only
+  purchase_incentive: "25000"
+
+scenario:
+  years: 10
+  annual_miles: "62000"
+  discount_rate: "0.09"
