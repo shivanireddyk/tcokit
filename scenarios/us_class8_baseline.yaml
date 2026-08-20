@@ -1,0 +1,43 @@
+# Class 8 long-haul tractor, United States, no policy support.
+#
+# Every figure is a string so the number in this file is the number used in the
+# arithmetic. Floats are rejected on load.
+#
+# Figures are order-of-magnitude public reference values for demonstration.
+# Before using this for analysis, replace them with sourced numbers and record
+# the source next to each line. The model is the contribution here; the inputs
+# are the analyst's responsibility.
+
+baseline_vehicle:
+  name: Class 8 diesel tractor
+  powertrain: diesel
+  purchase_price: "150000"
+  miles_per_gallon: "6.5"
+  maintenance_per_mile: "0.19"
+  insurance_per_year: "12000"
+  residual_fraction: "0.20"
+
+alternative_vehicle:
+  name: Class 8 battery electric tractor
+  powertrain: electric
+  purchase_price: "350000"
+  kwh_per_mile: "2.0"
+  maintenance_per_mile: "0.11"
+  insurance_per_year: "13000"
+  residual_fraction: "0.15"
+  charger_capital: "120000"
+
+region:
+  name: United States, national average
+  currency: USD
+  diesel_price_per_gallon: "3.85"
+  electricity_price_per_kwh: "0.16"
+  demand_charge_per_year: "9000"
+
+policy:
+  name: No policy support
+
+scenario:
+  years: 10
+  annual_miles: "80000"
+  discount_rate: "0.07"
