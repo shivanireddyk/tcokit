@@ -1,0 +1,44 @@
+# The same vehicles and region, with the policy levers switched on.
+# Running this against us_class8_baseline.yaml is the whole point of the tool:
+# it isolates what policy alone does to the economics.
+
+baseline_vehicle:
+  name: Class 8 diesel tractor
+  powertrain: diesel
+  purchase_price: "150000"
+  miles_per_gallon: "6.5"
+  maintenance_per_mile: "0.19"
+  insurance_per_year: "12000"
+  residual_fraction: "0.20"
+
+alternative_vehicle:
+  name: Class 8 battery electric tractor
+  powertrain: electric
+  purchase_price: "350000"
+  kwh_per_mile: "2.0"
+  maintenance_per_mile: "0.11"
+  insurance_per_year: "13000"
+  residual_fraction: "0.15"
+  charger_capital: "120000"
+
+region:
+  name: United States, national average
+  currency: USD
+  diesel_price_per_gallon: "3.85"
+  electricity_price_per_kwh: "0.16"
+  demand_charge_per_year: "9000"
+
+policy:
+  name: Purchase voucher, charger cost share, feebate and carbon tax
+  purchase_incentive: "120000"
+  charger_incentive: "60000"
+  feebate_on_diesel: "8000"
+  feebate_rebate_electric: "8000"
+  carbon_tax_per_gallon: "0.50"
+  road_user_charge_per_mile: "0.03"
+  road_user_charge_applies_to: ["diesel"]
+
+scenario:
+  years: 10
+  annual_miles: "80000"
+  discount_rate: "0.07"
